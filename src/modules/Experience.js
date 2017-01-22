@@ -1,8 +1,7 @@
 import React from 'react'
-import Menu from '../Menu'
 
 export default React.createClass({
   render() {
-    return <Menu value="experience"/>
+    return <h1>Experience</h1>
   }
 })

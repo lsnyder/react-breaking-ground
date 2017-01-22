@@ -21,11 +21,12 @@ ReactDOM.render(
   //props ex. txt
   <MuiThemeProvider>
     <Router history={hashHistory}>
-      <Route path="/" component={App}/>
-      <Route path="/about" component={About}/>
-      <Route path="/experience" component={Experience}/>
-      <Route path="/skills" component={Skills}/>
-      <Route path="/contact" component={Contact}/>
+      <Route path="/" component={App}>
+        <Route path="/about" component={About}/>
+        <Route path="/experience" component={Experience}/>
+        <Route path="/skills" component={Skills}/>
+        <Route path="/contact" component={Contact}/>
+      </Route>
     </Router>
   </MuiThemeProvider>,
   document.getElementById('root')
