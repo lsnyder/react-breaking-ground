@@ -1,8 +1,9 @@
 import React from 'react'
-import Menu from '../Menu'
 
-export default React.createClass({
+class Skills extends React.Component {
   render() {
-    return <Menu value="skills"/>
+    return <h1>Skills</h1>
   }
-})
+}
+
+export default Skills

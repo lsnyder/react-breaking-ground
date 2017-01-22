@@ -1,7 +1,9 @@
 import React from 'react'
 
-export default React.createClass({
+class Experience extends React.Component {
   render() {
     return <h1>Experience</h1>
   }
-})
+}
+
+export default Experience

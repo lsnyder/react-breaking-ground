@@ -5,19 +5,12 @@ import Radium from 'radium'
 import { Link } from 'react-router'
 
 
-// const styles ={
-//   topBar: {
-//     background: 'gray',
-//     flex: 100
-//   }
-// };
-
 class Menu extends React.Component {
   constructor(props) {
     super(props)
 
     this.state= {
-      value: props.value || "about"
+      value: props.value || props.location.replace('/', '') || "about"
     }
   }
 
@@ -28,14 +21,13 @@ class Menu extends React.Component {
   render(){
     return (
       <div>
-        <AppBar title="Luke Snyder" showMenuIconButton={false} />
+        <AppBar zDepth={0} title="Luke Snyder / Full Stack Engineer" showMenuIconButton={false} />
         <Tabs value={this.state.value} onChange={this.handleChange}>
           <Tab label="About Me" value="about" containerElement={<Link to="/about"/>} />
           <Tab label="Experience" value="experience" containerElement={<Link to="/experience"/> }/>
           <Tab label="Skills" value="skills" containerElement={<Link to="/skills"/>} />
           <Tab label="Contact" value="contact" containerElement={<Link to="/contact"/>} />
         </Tabs>
-        {this.props.children}
       </div>
     )
   }
