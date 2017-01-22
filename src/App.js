@@ -1,9 +1,9 @@
 import React from 'react'
-import AppBar from './AppBar';
+import Menu from './AppBar';
 
 class App extends React.Component {
   render(){
-    return <AppBar/>
+    return <Menu/>
   }
 }
 
