@@ -5,7 +5,7 @@ class App extends React.Component {
   render(){
     return (
       <div>
-        <Menu location={this.props.location.pathname}/>
+        <Menu {...this.props}/>
         {this.props.children}
       </div>
     )
